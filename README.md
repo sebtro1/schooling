@@ -2,9 +2,11 @@
 
 TODOS: 
 
--Clone dir das Repo
--npm install ausführen
--npm test ausführen
+Clone dir das Repo
+
+npm install ausführen
+
+npm test ausführen
 
 der Test ist rot, denn es gibt noch keine Funktion sum
 
