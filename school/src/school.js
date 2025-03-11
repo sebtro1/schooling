@@ -1,3 +1,5 @@
+const sum = (a, b) => a+b;
+
 const fizzBuzz = () => {
     console.log('FIZZ');
 } 
@@ -7,4 +9,4 @@ const hiThere= () => {
 }
 
 
-module.exports = { fizzBuzz, hiThere };
+module.exports = { fizzBuzz, hiThere, sum };
