@@ -23,11 +23,11 @@ jobs:
         run: |
           echo "Testing with no seed..."
           bun run random-number-generator.js
-          echo ""
+          echo "++"
 
           echo "Testing with string seed..."
           bun run random-number-generator.js "test-seed"
-          echo ""
+          echo "++"
 
           echo "Testing with numeric seed..."
           bun run random-number-generator.js 1906
@@ -86,15 +86,15 @@ jobs:
         run: |
           echo "Testing with no seed..."
           ./random-number-generator-linux
-          echo ""
+          echo "--"
 
           echo "Testing with string seed..."
           ./random-number-generator-linux "test-seed"
-          echo ""
+          echo "--"
 
           echo "Testing with numeric seed..."
           ./random-number-generator-linux 1906
-          echo ""
+          echo "--"
           
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
