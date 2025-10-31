@@ -1,8 +1,9 @@
 name: create artifacts
 on: [push, workflow_dispatch]
 
+# 3 jobs die nacheinander laufen
 jobs:
-
+  # tests code to make sure the app is performing as expected
   test:
     name: Test Code
     runs-on: ubuntu-latest
@@ -41,7 +42,7 @@ jobs:
           name: test-report
           path: report.txt
   
-
+  # compiles code in executables for linus and macos and uplaods them as an artifact in a zip file
   build:
     name: Build Executables
     runs-on: ubuntu-latest
@@ -71,6 +72,7 @@ jobs:
           name: random-number-generator-executables
           path: ./random-number-generator-*
 
+  # downloads the artifacts ans uses the linus binary to run another et of tests
   test-linux:
     name: Test Linux Executable
     runs-on: ubuntu-latest
