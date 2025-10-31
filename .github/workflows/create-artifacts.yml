@@ -32,6 +32,9 @@ jobs:
           echo "Testing with numeric seed..."
           bun run random-number-generator.js 1906
 
+          echo "Generated report:"
+          cat report.txt
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
