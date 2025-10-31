@@ -1,0 +1,31 @@
+name: second
+
+# workflow trigges
+# branches-ignore -> geht nciht zusammen mit branches -> just in case you need it
+# tags oder tags-ignore
+# if brnaches or tags include special characters like slashes put it in single or double quotes like 'feature/new-feature/' or "release/*"
+
+# a single repo can do 20 concurrent workflows, rest is queued
+# a github account can run 20 concurrend jobs for all repos -> each job can run for max six hours, than is stopped -> there is a free plan 
+# actions that interact with the github api have 1000 requests per hour
+# actions cant trigger workflows
+# actions logs are limitet to 64KB, larger is truncated  
+
+on: 
+    push:
+        branches:
+            - main
+            - develop
+    pull_request:
+        branches:
+            - main
+
+jobs:
+  job1:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step One
+        uses: actions/checkout@v4
+      - name: Step Two
+        run: env | sort

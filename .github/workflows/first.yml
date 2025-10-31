@@ -1,5 +1,6 @@
 name: first
 
+# push, pull_request, etc
 on: [push]
 
 # a workflow must hava at least one job
@@ -54,3 +55,4 @@ jobs:
         uses: actions/checkout@v4
       - name: Step Two
         run: env | sort
+
