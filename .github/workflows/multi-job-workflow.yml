@@ -1,8 +1,8 @@
-name: Multi-Job Workflow
-on: [push]
-
 # In this challenge, you’ll create a GitHub Actions workflow that compiles and runs Go code across multiple operating systems. 
 # You’ll also add a final job that performs cross-compilation to build binaries for multiple platforms.
+
+name: Multi-Job Workflow
+on: [push]
 
 jobs:
   ubuntu:
