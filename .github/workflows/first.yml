@@ -48,7 +48,7 @@ jobs:
   job3:
     needs: [job1, job2]
     name: Third Job
-    runs-on: moacos-latest  
+    runs-on: macos-latest
     steps:
       - name: Step One
         uses: actions/checkout@v4
