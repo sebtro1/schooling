@@ -1,0 +1,45 @@
+name: first
+
+on: [push]
+
+# a workflow must hava at least one job
+# each job must have a unique identifier
+# job identifier must start with a letter or underscore, ca contain (a-BZ,0-9,_)
+# jobs run in parallel by default
+
+# runners: windows,macos,ubuntu
+
+# steps are task within a job
+# steps run as process to the runner assigned to the job
+# steps run actions or commands
+  # Action -> uses -> execute packkaged code on the runner
+    # sourced as
+      # 1. from public repository         | uses: {owner}/{repo}@{ref}    | uses action/checkout@v4
+      # 2. the same repo as the workflow  | uses: ./path/to/the/action    | uses: .scripts/my-local-action
+      # 3. a docker image registry        | uses: docker://{image}}:{tag} | uses docker://hello-world:latest
+    # set up actions -> uses:action/java@4.7 - für compilers, linters, interpreters
+
+  # Command -> run -> execute specific commands in the runner's default shell (Bash, PowerShell)
+    # adding
+      # 1. single-line-command  | run: {command} {parameters} {arguments} | run: python app.py --help
+      # 2. multi-line-command   | run: |                                  | run:
+      #                               command 1                           |   npm install
+      #                               command 2                           |   npm run build
+
+jobs:
+  job1:
+    name: First Job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step One
+        uses: actions/checkout@v4
+      - name: Step Two
+        run: env | sort
+  job2:
+    name: Second Job
+    runs-on: windows-latest  
+    steps:
+      - name: Step One
+        uses: actions/checkout@v4
+      - name: Step Two
+        run: "Get-ChildItem Env: | Sort-Object Name"
