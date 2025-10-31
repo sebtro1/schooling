@@ -89,7 +89,7 @@ jobs:
           echo ""
 
           echo "Testing with string seed..."
-          ./random-number-generator-linux 1906 "test-seed"
+          ./random-number-generator-linux "test-seed"
           echo ""
 
           echo "Testing with numeric seed..."
