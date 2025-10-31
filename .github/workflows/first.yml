@@ -26,6 +26,8 @@ on: [push]
       #                               command 1                           |   npm install
       #                               command 2                           |   npm run build
 
+# dependencies wit needs: -> warted bis die andern fertig sind
+
 jobs:
   job1:
     name: First Job
@@ -43,3 +45,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Step Two
         run: "Get-ChildItem Env: | Sort-Object Name"
+  job3:
+    needs: [job1, job2]
+    name: Third Job
+    runs-on: moacos-latest  
+    steps:
+      - name: Step One
+        uses: actions/checkout@v4
+      - name: Step Two
+        run: env | sort
