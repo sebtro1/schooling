@@ -6,14 +6,16 @@ const today = function () {
 
 
 /**
- * Die fehlenden Parameter dieser Funktion müssen hinzugefügt werden. Tipp: Es sind 4 Parameter.
+ * Die fehlenden Parameter dieser Funktion müssen hinzugefügt werden. 
+ * Tipps: Es sind 4 Parameter. Default-Werte können mit einer Expression zugewiesen werden.
  * 
  * Die Funktion soll folgendes machen:
  * 
- * Wenn die Shipping-Kosten nciht angegeben werden, dann sollen sie wie folgt berechnet werden
- * Wenn Amount < 20 dann sind die Shipping-Kosten 5, sonst sind die Shipping-Kosten 10 
- *  
- * Wenn die Datum nicht angegeben wird, dann soll das heutige Datum verwendet werden
+ * Berechnung der Shipping-Kosten:
+ * Wenn die Shipping-Kosten nicht angegeben werden, dann sollen sie wie folgt berechnet werden.
+ * Wenn Amount < 20 dann sind die Shipping-Kosten 5, sonst sind die Shipping-Kosten 10 .
+ *   
+ * Wenn das Datum nicht angegeben wird, dann soll das heutige Datum verwendet werden.
  * 
  */
 const placeOrder = function (undefined) {
