@@ -2,6 +2,8 @@
 
 ## JavaScript
 
+Go to school folder!
+
 `npm install` ausführen
 
 `npm test` ausführen
