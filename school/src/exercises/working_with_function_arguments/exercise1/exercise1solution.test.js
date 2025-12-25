@@ -1,4 +1,4 @@
-const thisCanBeAnyName = require("./exercise1")
+const thisCanBeAnyName = require("./exercise1solution")
 
 const amount = 25.12;
 const fedTax = 10;
