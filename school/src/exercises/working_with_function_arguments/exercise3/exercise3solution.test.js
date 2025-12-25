@@ -1,4 +1,4 @@
-const unit = require("./exercise3")
+const unit = require("./exercise3solution")
 
 
 test('Test zum Ausführen der JS-Datei.', () => {

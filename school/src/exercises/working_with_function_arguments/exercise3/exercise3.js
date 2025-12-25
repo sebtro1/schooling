@@ -1,14 +1,15 @@
 
-// TODO: Schreibe die Paramter der Funktion so, dass die console.log-Ausgaben korrekt sind, so wie es in den Kommentaren steht.
-
-const purchaseItems = function (essential1, essential2, ...optionals) {  // here (...) is the rest parameter - Ein Array für alle restlichen Parameter!
-    console.log(essential1 + ', ' + essential2 + ', ' + optionals.join(', '));
+const runner = function () {
+    console.log('test runner für den Test');
 }
 
-purchaseItems('cheese'); // cheese, bread
-purchaseItems('cheese', 'eggs'); // cheese, eggs
+// Aufgabe: Schreibe die Parameer der Funktion so, dass milk und bread die Standardwerte sind, wenn kein Wert übergeben wird an dieser Position.
 
-const items = ['cheese', 'milk', 'bread', 'eggs', 'butter'];
-purchaseItems(...items); // cheese, milk, bread, eggs, butter // here (...) is the spread operator - Alle Parameter werden einzeln übergeben!
+const purchaseItems = function (essential1, essential2, ...optionals) { // Das (...) ist der JS "rest parameter" - Bildet einen Array für alle restlichen Parameter!
+    const message = `${essential1}, ${essential2}, ${optionals.join(', ')}`;
+    console.log(message);
+    return message;
+}
 
-module.exports = { purchaseItems };
+
+module.exports = { purchaseItems, runner };

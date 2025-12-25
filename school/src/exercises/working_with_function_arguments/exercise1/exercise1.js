@@ -1,4 +1,9 @@
-// TODO: Write the function here
+/* 
+Aufgabe: Schreibe hier die amountAfterTaxes Funktion.
+Auf der Console müssen die Werte ausgegeben werden, die in den Kommentaren angegeben sind.  
+Die Tests prüfen die Funktion auf ihre korrekten Werte und müssen alle bestehen.
+ */
+
 
 const amount = 25.12;
 const fedTax = 10;

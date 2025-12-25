@@ -1,7 +1,4 @@
 
-const runner = function () {
-    console.log('test runner für den Test');
-}
 
 const today = function () {
     return new Date();
